@@ -100,5 +100,5 @@ fi
 #fi
 fi
 if groups | grep -q rvm ; then
-  sources "/usr/local/lib/rvm"
+  [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" 
 fi
