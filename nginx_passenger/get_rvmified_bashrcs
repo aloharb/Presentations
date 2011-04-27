@@ -1,0 +1,10 @@
+echo "Backing up old .bashrc files..."
+mv /root/.bashrc /root/.bashrc.old
+mv /etc/skel/.bashrc /etc/skel/.bashrc.old
+echo "Done!"
+echo "Updating /root/.bashrc..."
+wget https://github.com/aloharb/Presentations/raw/master/nginx_passenger/root_bashrc && mv ./root_bashrc /root/.bashrc
+echo "Done!"
+echo "Updating /etc/skel/.bashrc..."
+wget https://github.com/aloharb/Presentations/raw/master/nginx_passenger/etc_skel_bashrc && mv ./etc_skel_bashrc /etc/skel/.bashrc
+echo "Done!"
