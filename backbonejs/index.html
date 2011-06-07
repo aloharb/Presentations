@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Backbone.js JS</title>
+	<meta http-equiv="expires" content="0"> <!-- DO NOT DELETE THIS! -->
+	<link rel="stylesheet" href="assets/prettify/prettify.css"> <!-- You can remove this if your presentation is not about programming -->
+	<link rel="stylesheet" media="screen, projection" href="assets/css/pik5.css"> <!-- DO NOT DELETE THIS! -->
+	<link rel="stylesheet" media="screen, projection" href="themes/pik5/style.css"> <!-- Use this to style your presentation -->
+	<link rel="stylesheet" media="print" href="themes/pik5/print.css"> <!-- Use this to make your presentation print well -->
+	<script src="assets/prettify/prettify.js"></script> <!-- You can remove this if your presentation is not about programming -->
+	<script src="assets/js/jquery.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="assets/js/shared.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="assets/js/pik5.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="custom.js"></script> <!-- Use this for your own slide programming -->
+	<base target="_blank">
+</head>
+<body onload="prettyPrint()"> <!-- You can remove the onload property if your presentation is not about programming -->
+
+
+<div id="header">
+	<h1>What is Backbone.js?</h1>
+	<a href="http://twitter.com/hellocreation">@hellocreation</a>
+</div>
+
+
+
+
+<div id="frame"> <!-- DO NOT DELETE THIS! -->
+
+
+<div id="framecontainer"> <!-- DO NOT DELETE THIS! -->
+
+
+<div class="pik5-slide" id="start">
+	<h2>What is Backbone.js</h2>
+	<p>
+		Scott Murphy @hellocreation
+	</p>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>About myself</h2>
+	<ul>
+		<li>UI guy at Ikayzo, Inc - interactive agency in Hawaii.</li>
+		<li>Student MS HCI at Iowa State University</li>
+		<li>Do a lot of front-end html/css/js work.</li>
+	</ul>
+</div>
+
+<div class="pik5-slide">
+	<h2>What do I know about Backbone.js?</h2>
+	<p>...just enough to know it has a lot of potential.</h3>
+	<p>1 client project</p>
+	<p>1 personal project</p>
+	<p>and this presentation.</p>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Writing Large JS Apps</h2>
+	<pre class="prettyprint">	
+$('.toggleTrigger').click(function() { 
+	dosomething();	
+});
+$('.orderTrigger').click(function() { 
+	doanotherthing();	
+});
+$('.profileTrigger').click(function() { 
+	dosomething();	
+});
+function dosomething() {
+	//console.log('do this work?');
+}
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Yeah it sucks.</h2>
+	<div align="center"><img src="presentation-data/images/Spaghetti.jpg" width="297" height="400" alt="Spaghetti">
+		<span class="credits">
+		source:	http://www.sogoodblog.com/2010/12/09/eating-styles-spaghetti-edition/
+		</span>
+		</div>
+
+</div>
+
+<div class="pik5-slide">
+	<h2>Namespacing Objects</h2>
+	<pre class="prettyprint">	
+		var myApp = myApp || {};
+		myApp.loginWindow = {
+			init: function() {
+				
+			},
+			openModal: function() {
+				
+			}
+		}
+		myApp.anotherThing = {
+			
+		}
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Little better...but just gets by.</h2>
+	<div align="center"><img src="presentation-data/images/ride.gif" width="425" height="242" /></div>
+	<ul>
+		<li>Piles of nested callbacks</li>
+		<li>Difficult to follow DOM Manipulations</li>
+		<li>Gets the job done but chaotic</li>
+	</ul>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Structure!</h2>
+	<div align="center">
+		<img src="presentation-data/images/wordpress-permalink-structure.jpg" width="600" height="300" alt="Wordpress Permalink Structure">
+		<span class="credits">
+		http://www.wolf-howl.com/seo/url-configuration-wordpress/
+		</span>
+	</div>
+</div>
+
+<div class="pik5-slide">
+	<h2>Welcome Backbone.js</h2>
+	<ul>
+		<li>Created by Jeremy Ashkenas (DocumentCloud) who built CoffeeScript and underscore.js</li>
+		<li>Super small and lightweight - 3.9kb compressed</li>
+		<li>It provides structure to your js apps with MVC</li>
+		<li>Backend agnostic</li>
+	</ul>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Getting Started</h2>
+	<h3>Required<h3>
+	<pre style="color:white !important; font-size:16px;">	
+&lt;script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+&lt;script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+	</pre>
+	<h3>Optional - your favorite JS library</h3>
+	<pre style="color:white !important; font-size:16px;">	
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>One dependency <br/> underscore.js</h2>
+	<h3>What is underscore?</h3>
+	<quote>
+		Underscore provides 60-odd functions that support both the usual functional suspects: map, select, invoke — as well as more specialized helpers: function binding, javascript templating, deep equality testing, and so on. It delegates to built-in functions, if present, so modern browsers will use the native implementations of forEach, map, reduce, filter, every, some and indexOf. 
+		</quote>
+</div>
+
+<div class="pik5-slide">
+	<h2>What does backbone give you?</h2>
+	<ul>
+		<li>Models</li>
+		<li>Collections</li>
+		<li>Views</li>
+		<li>Controllers</li>
+	</ul>
+</div>
+
+<div class="pik5-slide">
+	<h2>Model</h2>
+	<h3>A model is piece of data.</h3>
+	<pre class="prettyprint">	
+Tour = {
+	"name": "Lovely Tour",
+	"price": "15",
+    	"pid": 0
+}
+	</pre>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>How you set up a backbone model</h2>
+	<pre class="prettyprint">
+var Tour = Backbone.Model.extend({  
+       initialize: function(){  
+           alert("Sup! ");  
+       }
+ });
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Play with it.</h2>
+	<pre class="prettyprint">
+// Create a new tour  
+var tour1 = new Tour({ name: "Boring Tour", price: '15'});  
+
+var tour1Price = portal.get('price');  
+
+tour1.set({ name: "New name for Tour"});
+
+//One great feature of backbone is that it takes care of saving.  
+//It uses jQuery Ajax to do this (so I'm told)
+tour1.save();  
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Collection</h2>
+	<p>A collection is collection of Models</p>
+	<pre class="prettyprint">	
+TourCollection = [
+		{
+	        "name": "Lovely Tour",
+	        "price": "15",
+			"pid": 0
+	    	},
+		{
+		    "name": "Awesome Tour",
+		    "price": "15",
+			"pid": 1
+		},
+]
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Create a backbone collection</h2>
+	<pre class="prettyprint">
+TourCollection = Backbone.Collection.extend({
+	//tie the collection to a model
+	model: Tour,
+
+	//If you define a comparator, it will be used to maintain 
+	//the collection in sorted order.
+	comparator: function(item) {
+	       return item.get('pid');
+	   }
+});
+	</pre>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Controllers</h2>
+	<ul>
+		<li>Manages states of the App</li>
+		<li>You can do routing and tie methods similar to server-side routing</li>
+	</ul>
+</div>
+
+<div class="pik5-slide">
+	<pre class="prettyprint">
+var MyApp = Backbone.Controller.extend({  
+	  routes: {  
+	    "":              "root",  
+	    "showTours":      "tourList",  
+	  },  
+	  root: function() {  
+	  	
+	  },  
+	  tourList: function() {
+	  },
+  });
+	</pre>
+</div>
+<div class="pik5-slide">
+	<h2>Views</h2>
+	<ul>
+		<li>Views listen to events thrown by DOM or even changes in collections/model </li>
+		<li>Views are tied with collections or models</li>
+	</ul>
+	<h3>Instantiating a View</h3>
+	<pre class="prettyprint">
+		new TourListView({model:tours});
+	</pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Backbone Views</h2>
+	<pre class="prettyprint">
+var TourListView = Backbone.View.extend({
+   //associate dom element with this view
+   el: $('#tourListView'),
+   events: {
+		"click .contact" : "contactBtnClick",
+		"hover .picture" : "pictureHover",
+   },
+   render: function() {
+       //show this view
+   },
+   contactBtnClick: function() {},
+   pictureHover: function() {}
+});
+	</pre>
+</div>
+
+
+
+<div class="pik5-slide">
+	<h2>Let's see how it works.</h2>
+	<a target="_blank" href="sample/">Sample Application</a>
+</div>
+
+<div class="pik5-slide">
+	<h2>Why is it powerful?</h2>
+	<ul>
+		<li>Makes it easier maintain and others to follow your code</li>
+		<li>Split up a page into multiple views to create great interactions</li>
+		<li>Updating models and collections trigger events that update views</li>
+	</ul>
+</div>
+
+<div class="pik5-slide">
+	<h2>Other</h2>
+	<h3>Testing</h3>
+	<p>Using jasmine - http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html</p>
+	<h3>Examples and references</h3>
+	<ul>
+		<li>http://documentcloud.github.com/backbone/</li>
+		<li>http://net.tutsplus.com/tutorials/javascript-ajax/getting-started-with-backbone-js/</li>
+		<li>http://ryandotsmith.heroku.com/2010/10/a-backbone-js-demo-app-sinatra-backend.html</li>
+	</ul>
+</div>
+
+
+</div> <!-- End #framecontainer. DO NOT DELETE THIS! -->
+
+
+</div> <!-- End #frame. DO NOT DELETE THIS! -->
+
+
+</body>
+</html>
+
